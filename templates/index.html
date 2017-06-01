@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Group Assignment</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <table>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created_at</th>
+                <th>Actions</th>
+                {% for i in groups %}
+                    <tr>
+                        <td>{{ i['first_name'] }}</td>
+                        <td>{{ i['last_name'] }}</td>
+                        <td>{{ i['email'] }}</td>
+                        <td>{{ i['new_date'] }}</td>
+                        <td><a href="/users/{{ i['id'] }}">Show</a></td>
+                        <td><a href="/users/{{ i['id'] }}/edit">Edit</a></td>
+                        <form action="/delete/{{ i['id'] }}" method="post">
+                            <td><input type="submit" name="delete" value="Delete"></td>
+                        </form>
+                    </tr>
+                {% endfor %}
+            </table>
+            <a href="/users/new">Add a new user</a>
+            <!-- <form action="/process" method="post">
+                First Name: <input type="text" name="first_name">
+                <input type="submit" name="submit">
+            </form> -->
+        </div>
+    </body>
+</html>

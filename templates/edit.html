@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Edit</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <form action="/users/{{ id }}/edit" method="post">
+                <p>First name: <input type="text" name="first_name"></p>
+                <p>Last name: <input type="text" name="last_name"></p>
+                <p>Email: <input type="text" name="email"></p>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

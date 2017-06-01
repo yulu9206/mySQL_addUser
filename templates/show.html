@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Show</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>User {{ groups[0]['id'] }}</h1>
+            <h3>Full Name: {{ groups[0]['first_name'] }} {{ groups[0]['last_name'] }}</h3>
+            <h3>Email: {{ groups[0]['email']}}</h3>
+            <h3>Created at: {{ groups[0]['new_date']}}</h3>
+        </div>
+    </body>
+</html>
